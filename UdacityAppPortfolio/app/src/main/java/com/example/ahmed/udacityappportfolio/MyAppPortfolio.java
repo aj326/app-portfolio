@@ -7,12 +7,14 @@ package com.example.ahmed.udacityappportfolio;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class MyAppPortfolio extends Activity {
+public class MyAppPortfolio extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,35 +45,18 @@ public class MyAppPortfolio extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void displayToast(View view){
+    public void displayToast(View view) {
 
+        Button button = (Button) view;
 
-        switch (view.getId())
-        {
-            case R.id.spotifyButton:
-                produceToast("This button will launch my Spotify Streamer App!");
-                return;
-            case R.id.scoresButton:
-                produceToast("This button will launch my Scores App!");
-                return;
-            case R.id.libraryButton:
-                produceToast("This button will launch my Library App!");
-                return;
-            case R.id.buildItBiggerButton:
-                produceToast("This button will launch my Build it Bigger App!");
-                return;
-            case R.id.xyzButton:
-                produceToast("This button will launch my XYZ Reader App!");
-                return;
-            case R.id.myButton:
-                produceToast("This button will launch my Capstone App!");
-                return;
-        }
-    }
-    public void produceToast(CharSequence text)
-    {
+        String buttonText = (String) button.getText();
+
         Context context = getApplicationContext();
+        // open_app would add "Opens the app "
+        CharSequence text = getString(R.string.open_app)
+                + buttonText;
         int duration = Toast.LENGTH_SHORT;
+
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }

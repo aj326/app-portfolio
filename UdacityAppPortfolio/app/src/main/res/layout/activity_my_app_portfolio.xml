@@ -1,109 +1,96 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin_layout"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8C9EFF"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MyAppPortfolio"
-    android:id="@+id/rel_layout"
-    android:background="#8C9EFF"
-    style="@style/AppTheme">
+    tools:context=".MyAppPortfolio">
 
-    <TextView android:text="@string/header" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="25dp"
-/>
-    <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spotify Streamer"
+        android:text="@string/header"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
         android:id="@+id/spotifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentBottom="false"
-        android:layout_below="@+id/textView"
-        android:layout_alignEnd="@id/textView"
-        android:layout_alignParentStart="false"
         android:layout_marginTop="15dp"
-        android:layout_alignStart="@id/textView"
         android:background="#64B5F6"
-        android:onClick="@string/Call_displayToast" />
+        android:onClick="@string/Call_displayToast"
+        android:text="Spotify Streamer"
+        android:layout_weight="1"
+        android:layout_margin="15dp" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Scores App"
         android:id="@+id/scoresButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:layout_below="@+id/spotifyButton"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
-        android:layout_marginTop="5dp"
-        android:layout_alignEnd="@id/spotifyButton"
-        android:layout_alignStart="@id/spotifyButton"
-        android:background="#64B5F6"
-        android:onClick="@string/Call_displayToast" />
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Library App"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+
+        android:background="#64B5F6"
+        android:onClick="@string/Call_displayToast"
+        android:text="Scores App"
+        android:layout_weight="1"
+        android:layout_margin="15dp" />
+
+    <Button
         android:id="@+id/libraryButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:layout_below="@+id/scoresButton"
-        android:layout_alignStart="@+id/scoresButton"
-
-        android:layout_alignEnd="@id/scoresButton"
-        android:layout_marginTop="5dp"
-        android:background="#64B5F6"
-        android:onClick="@string/Call_displayToast" />
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Build It Bigger"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#64B5F6"
+        android:onClick="@string/Call_displayToast"
+        android:text="Library App"
+        android:layout_weight="1"
+        android:layout_margin="15dp" />
+
+    <Button
         android:id="@+id/buildItBiggerButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:layout_below="@+id/libraryButton"
-        android:layout_alignStart="@+id/libraryButton"
-        android:layout_alignEnd="@id/libraryButton"
-        android:layout_marginTop="5dp"
-        android:background="#64B5F6"
-        android:onClick="@string/Call_displayToast" />
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="XYZ Reader"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#64B5F6"
+        android:onClick="@string/Call_displayToast"
+        android:text="Build It Bigger"
+        android:layout_weight="1"
+        android:layout_margin="15dp" />
+
+    <Button
         android:id="@+id/xyzButton"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:layout_below="@+id/buildItBiggerButton"
-        android:layout_alignStart="@+id/buildItBiggerButton"
-        android:layout_alignEnd="@id/buildItBiggerButton"
-        android:layout_marginTop="5dp"
-        android:background="#64B5F6"
-        android:onClick="@string/Call_displayToast" />
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Capstone: My Own App"
-        android:id="@+id/myButton"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#64B5F6"
+        android:onClick="@string/Call_displayToast"
+        android:text="XYZ Reader"
         android:layout_weight="1"
-        android:layout_below="@+id/xyzButton"
-        android:layout_alignStart="@+id/xyzButton"
-        android:layout_alignEnd="@id/xyzButton"
+        android:layout_margin="15dp" />
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
         android:background="#3f51b5"
-        android:onClick="@string/Call_displayToast" />
+        android:onClick="@string/Call_displayToast"
+        android:text="Capstone: My Own App"
+        android:layout_weight="1"
+        android:layout_margin="15dp" />
+</LinearLayout>
 
-</RelativeLayout>
